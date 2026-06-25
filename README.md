@@ -19,10 +19,6 @@ O projeto foi desenvolvido em **R**, utilizando o ecossistema `fpp3` e o conceit
 *   **Tendência de Alta:** Os dados revelam um crime em constante crescimento estrutural, com um pico significativo em 2019 e uma aceleração agressiva na região Sul entre 2017 e 2019.
 *   **Impacto Pandêmico:** Houve uma queda visível nos registros em 2020, interpretada como **subnotificação** decorrente do isolamento social, e não como uma redução real na criminalidade.
 
-## 📈 Desafios da Modelagem
-Um dos destaques técnicos deste repositório é a decisão metodológica de ignorar testes de estacionariedade automáticos (que sugeriam $d=0$) em favor da **evidência visual de tendência de alta** ($d=1$) observada nas séries regionais.
-*   **Instabilidade no Sul:** O modelo ARIMA automático apresentou um erro elevado (MAPE de 42%) na região Sul devido à mudança brusca na inclinação da série no final do período de treino, demonstrando a complexidade de prever fenômenos sociais em rápida escalada.
-
 ## 📂 Estrutura do Repositório
 *   `data/`: Bases consolidadas unindo dados do SINAN, SINESP e projeções do IBGE/PNAD.
 *   `scripts/`: Fluxo completo desde a limpeza (`clean_names`, `str_trim`) até a modelagem e diagnóstico de resíduos.
